@@ -100,7 +100,17 @@ default_layer {
                  &kp LGUI &kp LALT &kp LCTRL &kp SPC &kp TAB    &kp BSPC         &kp RET &kp RCTRL &kp RALT  &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &rgb_ug RGB_BRI RGB_BRD>;
+            / {
+  behaviors {
+    inc_dec_rgb_ug: enc_rgb_ug {
+      compatible = "zmk,behavior-sensor-rotate-var";
+      #sensor-binding-cells = <2>;
+      bindings = <&rgb_ug>, <&rgb_ug>;
+    };
+  };
+};
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_rgb_ug RGB_BRI RGB_BRD>;
         };
 
         lower_layer {
