@@ -73,6 +73,14 @@
 
 / {
 
+    behaviors {
+        inc_dec_rgb_ug: enc_rgb_ug {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&rgb_ug>, <&rgb_ug>;
+        };
+    };
+
    // Activate ADJUST layer by pressing raise and lower
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -99,16 +107,6 @@ default_layer {
 &kp LSHFT &kp Y  &kp X    &kp C    &kp D     &kp V  &kp C_MUTE &rgb_ug RGB_TOG &kp K  &kp H     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
                  &kp LGUI &kp LALT &kp LCTRL &kp SPC &kp TAB    &kp BSPC         &kp RET &kp RCTRL &kp RALT  &kp RGUI
             >;
-
-            / {
-  behaviors {
-    inc_dec_rgb_ug: enc_rgb_ug {
-      compatible = "zmk,behavior-sensor-rotate-var";
-      #sensor-binding-cells = <2>;
-      bindings = <&rgb_ug>, <&rgb_ug>;
-    };
-  };
-};
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_rgb_ug RGB_BRI RGB_BRD>;
         };
