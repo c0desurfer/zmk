@@ -100,7 +100,7 @@
                  &kp LGUI &kp LALT &kp LCTRL &kp RET &kp TAB    &kp BSPC         &kp SPC &kp RCTRL &kp RALT  &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LED_UP LED_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RGB_BRI RGB_BRD>;
         };
 
         lower_layer {
