@@ -95,16 +95,16 @@
 
 default_layer {
 // ------------------------------------------------------------------------------------------------------------------
-// | ESC  |  1  |  2  |  3   |  4   |  5   |                         |  6   |  7    |  8    |  9   |   0   |       |
-// | CAPS |  Q  |  W  |  F   |  P   |  B   |                         |  J   |  L    |  U    |  Z   |   ;   | BKSPC |
-// |  TAB  |  A  |  R  |  S   |  T   |  G   |                         |  M   |  N    |  E    |  I   |   O   |   '   |
-// | SHIFT |  Y  |  X  |  C   |  D   |  V   |  MUTE  |        | RGB   |  K   |  H    |  ,    |  .   |   /   | SHIFT |
+// | RGB_TOG |  1  |  2  |  3   |  4   |  5   |                         |  6   |  7    |  8    |  9   |   0   |       |
+// | CAPS    |  Q  |  W  |  F   |  P   |  B   |                         |  J   |  L    |  U    |  Z   |   ;   | BKSPC |
+// |  TAB    |  A  |  R  |  S   |  T   |  G   |                         |  M   |  N    |  E    |  I   |   O   |   '   |
+// | SHIFT   |  Y  |  X  |  C   |  D   |  V   |  MUTE  |        | RGB   |  K   |  H    |  ,    |  .   |   /   | SHIFT |
 //               | GUI | ALT  | CTRL | SPACE|  TAB   |        | BKSPC | ENTER| CTRL  | ALT   | GUI  |
             bindings = <
-&kp ESC   &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                              &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &none
-&kp CAPS  &kp Q  &kp W    &kp F    &kp P     &kp B                               &kp J  &kp L     &kp U     &kp Z    &kp SEMI &kp BSPC
-&kp TAB   &kp A  &kp R    &mt LCMD S &mt LSHIFT T &kp G                          &kp M  &mt RSHIFT N &mt RCMD E &kp I &kp O    &kp SQT
-&kp LSHFT &kp Y  &kp X    &kp C    &kp D     &kp V  &kp C_MUTE &rgb_ug RGB_TOG &kp K  &kp H     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+&rgb_ug RGB_TOG &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                              &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &none
+&kp CAPS        &kp Q  &kp W    &kp F    &kp P     &kp B                               &kp J  &kp L     &kp U     &kp Z    &kp SEMI &kp BSPC
+&kp TAB         &kp A  &kp R    &mt LCMD S &mt LSHIFT T &kp G                          &kp M  &mt RSHIFT N &mt RCMD E &kp I &kp O    &kp SQT
+&kp LSHFT       &kp Y  &kp X    &kp C    &kp D     &kp V  &kp C_MUTE &rgb_ug RGB_TOG &kp K  &kp H     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
                  &kp LGUI &kp LALT &kp LCTRL &kp SPC &kp TAB    &kp BSPC         &kp RET &kp RCTRL &kp RALT  &kp RGUI
             >;
 
